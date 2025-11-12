@@ -10,13 +10,20 @@ module.exports = {
       xl: "1.5rem",
     },
     fontFamily: {
-      body: ["Geist", "Open Sans", "sans-serif"],
+      body: ["Poppins", "sans-serif"],
+      brand: ["Quicksand", "Poppins", "sans-serif"],
+      typewriter: ["Geist Mono", "sans-serif"],
     },
     extend: {
       fontSize: {
         tiny: "0.625rem",
+        medium: "1.4rem",
+        bigger: "2.8rem",
         huge: "3.5rem",
         massive: "5rem",
+      },
+      letterSpacing: {
+        custom: "0.2rem",
       },
       colors: {
         bg: {

@@ -1,0 +1,9 @@
+:root {
+  --accent: #e9b61c;
+  --typewriter: #33e94e;
+}
+
+.dark {
+  --accent: #33e94e;
+  --typewriter: #e9b61c;
+}

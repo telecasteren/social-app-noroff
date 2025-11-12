@@ -1,0 +1,38 @@
+.active {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: var(--underline-left, 0);
+  width: var(--underline-width, 0%);
+  height: 4px;
+  background-color: var(--accent);
+  transition: left 0.2s ease-in-out, width 0.4s ease-in-out;
+}
+
+li,
+li .nav-hover-bg {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) 100%
+  );
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+li:hover,
+li .nav-hover-bg:hover {
+  background-size: 100% 100%;
+  color: transparent;
+}

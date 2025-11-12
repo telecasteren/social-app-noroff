@@ -1,9 +1,0 @@
-import AuthForm from "/js/app/components/form/authForm.js";
-
-export function displayAuthForms() {
-  const loginBtn = document.getElementById("loginBtn");
-  const signupBtn = document.getElementById("signupBtn");
-
-  if (loginBtn) loginBtn.addEventListener("click", () => AuthForm(false));
-  if (signupBtn) signupBtn.addEventListener("click", () => AuthForm(true));
-}

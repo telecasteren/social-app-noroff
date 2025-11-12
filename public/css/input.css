@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+@import url(globals.css);
+@import url(./custom/nav-underline.css);
+@import url(./custom/typeLetters.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded-full flex items-center justify-center text-sm h-10 sm:h-12 m-8 px-8 sm:px-5 sm:min-w-44;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--accent)] text-black hover:brightness-110 transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white hover:bg-[var(--accent)] hover:text-black transition-colors duration-300;
+  }
+
+  .input-field {
+    @apply block w-full cursor-pointer rounded-md bg-white px-3 py-1.5 outline-1 text-black placeholder:text-black sm:text-sm;
+  }
+
+  .input-border {
+    @apply border border-solid border-black dark:border-none dark:focus:ring-blue-500;
+  }
+
+  .submit-btn {
+    @apply flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold;
+  }
+
+  .modal {
+    @apply fixed inset-0 z-[1000] overflow-auto gap-20 bg-black/50;
+  }
+  .modal-content {
+    @apply sm:flex bg-white m-[15%] mx-auto p-2 w-[80%] md:w-[60%] md:justify-center
+         h-fit rounded-lg z-[1100] relative shadow-lg;
+  }
+
+  .mobile-nav-item {
+    @apply block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white;
+  }
+
+  .current-mobile-nav-item {
+    @apply text-black bg-accent-light dark:text-black dark:bg-accent-dark;
+  }
+}
