@@ -50,7 +50,7 @@ const timeAgo = (date) => {
 export const dateBadge = (createdAt, bgColor, textColor, borderColor) => {
   const span = document.createElement("span");
   span.className = `bg-${bgColor} text-${textColor} text-xs font-medium inline-flex items-center
-  px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-${textColor} border border-${borderColor}`;
+  px-2.5 py-0.5 rounded-xs dark:bg-gray-700 dark:text-${textColor} border border-${borderColor}`;
 
   span.appendChild(document.createTextNode(timeAgo(createdAt)));
 

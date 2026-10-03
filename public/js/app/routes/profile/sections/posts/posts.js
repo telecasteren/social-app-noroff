@@ -28,7 +28,7 @@ const Posts = async (limit, page = 1) => {
     const message = document.createElement("div");
     message.textContent = "No posts yet.";
     message.className =
-      "p-4 w-fit text-center text-sm rounded-sm shadow-xl border border-accent-light dark:border-accent-dark";
+      "p-4 w-fit text-center text-sm rounded-xs shadow-xl border border-accent-light dark:border-accent-dark";
     postsList.appendChild(message);
 
     return postsList;

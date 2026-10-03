@@ -25,7 +25,7 @@ const searchInput = () => {
 
   const divIcon = document.createElement("div");
   divIcon.className =
-    "absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none";
+    "absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none";
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("class", "w-4 h-4 text-gray-500 dark:text-gray-400");
@@ -49,7 +49,7 @@ const searchInput = () => {
   input.className = `block w-full p-4 ps-10
   text-sm text-gray-900 border border-gray-300 rounded-lg
   bg-gray-50 focus:ring-blue-500 focus:border-blue-500
-  dark:border-none dark:bg-[#0f0c29] dark:placeholder-gray-400 dark:text-white
+  dark:border-none dark:bg-bg-dark3 dark:placeholder-gray-400 dark:text-white
   dark:focus:ring-blue-500 dark:focus:border-blue-500`;
   input.placeholder = "Search posts..";
   input.required = true;
@@ -58,7 +58,7 @@ const searchInput = () => {
   button.type = "submit";
   button.id = "search-btn";
   button.className =
-    "absolute inset-y-0 end-0 flex items-center m-2 pl-2 pr-2 bg-[var(--accent)] hover:brightness-110 text-sm text-black rounded-md transition duration-300";
+    "absolute inset-y-0 inset-e-0 flex items-center m-2 pl-2 pr-2 bg-(--accent) hover:brightness-110 text-sm text-black rounded-md transition duration-300";
   button.textContent = "Search";
 
   divWrapper.appendChild(divIcon);

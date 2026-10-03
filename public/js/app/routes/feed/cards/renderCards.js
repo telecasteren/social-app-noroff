@@ -46,7 +46,7 @@ export const renderCards = async (posts, container) => {
 
     const card = document.createElement("div");
     card.className = `user-post max-w-sm w-80 bg-stone-50 border border-stone-200 rounded-md
-    shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
+    shadow-xs dark:bg-bg-dark3 dark:border-none hover:scale-105 transition-transform duration-300`;
     card.setAttribute("data-id", postId);
     card.setAttribute("data-id", postId);
     card.dataset.created = created;
@@ -83,7 +83,7 @@ export const renderCards = async (posts, container) => {
     linkTitle.href = `/user/profile/?id=${postAuthorName}`;
     const authorName = document.createElement("h2");
     authorName.className = `text-2xl font-bold tracking-tight text-accent-light
-    dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200`;
+    dark:text-accent-dark hover:text-gray-900 dark:hover:text-gray-200`;
     authorName.textContent = postAuthorName;
     linkTitle.appendChild(authorName);
 

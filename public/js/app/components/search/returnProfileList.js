@@ -11,7 +11,7 @@ export const returnProfileList = (users) => {
     link.href = `/user/profile/?id=${username}`;
     const listLi = document.createElement("li");
     listLi.className =
-      "text-md underline hover:underline-none hover:text-[var(--accent)]";
+      "text-md underline hover:underline-none hover:text-(--accent)";
     listLi.setAttribute("data-username", username);
     listLi.innerText = username;
 

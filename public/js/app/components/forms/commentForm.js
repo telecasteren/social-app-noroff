@@ -63,7 +63,7 @@ export const commentForm = async () => {
   commentTextarea.rows = 3;
   commentTextarea.id = "comment-message";
   commentTextarea.className = `w-full p-2 border border-accent-light dark:border-accent-dark
-  rounded-md dark:bg-[#302b63] text-black dark:text-white hover:scale-[1.01] transition duration-300`;
+  rounded-md dark:bg-bg-dark2 text-black dark:text-white hover:scale-[1.01] transition duration-300`;
 
   const buttonDiv = document.createElement("div");
   buttonDiv.className = "flex justify-start mb-6";

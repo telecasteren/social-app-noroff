@@ -32,7 +32,7 @@ export const commentBlock = async (comment) => {
   const currentUserName = currentUser.name;
 
   const lineEl = document.createElement("hr");
-  lineEl.className = "border-solid border-gray-200 dark:border-[#0f0c29] my-2";
+  lineEl.className = "border-solid border-gray-200 dark:border-bg-dark3 my-2";
 
   const singleCommentContainer = document.createElement("div");
   singleCommentContainer.className = "flex flex-col";

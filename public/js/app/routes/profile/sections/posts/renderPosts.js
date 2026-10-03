@@ -63,7 +63,7 @@ export const renderPosts = async (posts, container) => {
     const postImage = document.createElement("img");
     postImage.src = postImgSrc;
     postImage.alt = postImgAlt;
-    postImage.className = `w-full h-full object-cover rounded-sm border border-gray-300 dark:border-0
+    postImage.className = `w-full h-full object-cover rounded-xs border border-gray-300 dark:border-0
       hover:scale-105 md:hover:bg-black md:hover:opacity-50 transition-transform duration-300`;
     postImage.onerror = () => {
       postImage.src = NO_IMG_URL;
@@ -89,7 +89,7 @@ export const renderPosts = async (posts, container) => {
         label: "Edit",
         classes: `
     edit-post absolute top-2 right-2 pl-2 pr-2 w-10 hover:w-24 h-10
-    bg-gray-800 dark:bg-[#181438e3] hover:bg-gray-600 hover:dark:bg-[#534ba5e3]
+    bg-gray-800 dark:bg-[#181438e3] hover:bg-gray-600 dark:hover:bg-[#534ba5e3]
     rounded shadow-md cursor-pointer flex items-center justify-start
     overflow-hidden transition-all duration-300 group
     `,

@@ -51,7 +51,7 @@ export const editDescription = async (user) => {
 
   const closeButton = document.createElement("span");
   closeButton.innerHTML = "&times;";
-  closeButton.className = `close-modal text-[var(--accent)]
+  closeButton.className = `close-modal text-(--accent)
   text-[28px] font-bold cursor-pointer hover:text-black ml-4`;
 
   container.appendChild(bioLabel);
@@ -59,7 +59,7 @@ export const editDescription = async (user) => {
 
   const bio = document.createElement("textarea");
   bio.className = `
-  w-full sm:w-[320px] md:w-[360px] lg:w-[100%]
+  w-full sm:w-[320px] md:w-[360px] lg:w-full
   rounded p-2 text-black text-sm mt-2 mb-2 justify-self-center
   border border-gray-800
 `;
@@ -74,7 +74,7 @@ export const editDescription = async (user) => {
   submitButton.id = "submit-btn";
   submitButton.type = "submit";
   submitButton.className = `text-text-light inline-flex items-center mb-2 justify-center
-  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   submitButton.innerHTML =
@@ -84,7 +84,7 @@ export const editDescription = async (user) => {
   deleteButton.id = "delete-btn";
   deleteButton.type = "button";
   deleteButton.className = `text-white inline-flex items-center justify-center
-  bg-[#181438e3] hover:brightness-150 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-[#181438e3] hover:brightness-150 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   deleteButton.innerHTML =
@@ -92,7 +92,7 @@ export const editDescription = async (user) => {
 
   const confirmMessage = document.createElement("div");
   confirmMessage.className =
-    "hidden max-w-[100%] rounded bg-red-100 mt-2 p-2 border border-red-600 text-red-600";
+    "hidden max-w-full rounded-sm bg-red-100 mt-2 p-2 border border-red-600 text-red-600";
   confirmMessage.textContent = "Are you sure you want to delete this bio?";
 
   const createConfirmationOption = (text) => {

@@ -37,11 +37,11 @@ const SinglePost = async () => {
 
   const cardContainer = document.createElement("div");
   cardContainer.className =
-    "grid grid-cols-1 xl:grid-cols-[2fr,1.5fr] justify-self-center mt-5 max-w-[95vw] md:max-w-[60vw]";
+    "grid grid-cols-1 xl:grid-cols-[2fr_1.5fr] justify-self-center mt-5 max-w-[95vw] md:max-w-[60vw]";
 
   const card = document.createElement("div");
   card.className = `relative flex flex-col bg-stone-50 border border-gray-200 rounded-l-sm
-    shadow-sm dark:bg-[#0f0c29] dark:border-none`;
+    shadow-xs dark:bg-bg-dark3 dark:border-none`;
 
   const image = document.createElement("img");
   image.className = "rounded-l-sm w-full h-[500px] object-cover";
@@ -71,7 +71,7 @@ const SinglePost = async () => {
   const authorName = document.createElement("h5");
   authorName.setAttribute("data-userId", author);
   authorName.className = `text-2xl tracking-tight text-gray-900 dark:text-gray-200
-  hover:text-accent-light hover:dark:text-accent-dark flex-grow`;
+  hover:text-accent-light dark:hover:text-accent-dark grow`;
   authorName.textContent = author;
   linkTitle.appendChild(authorName);
   authorContainer.appendChild(linkTitle);
@@ -147,7 +147,7 @@ const SinglePost = async () => {
   const commentSection = document.createElement("div");
   commentSection.id = "comments-section";
   commentSection.className = `flex flex-col xl:w-96 rounded-r-sm
-  border border-solid border-gray-200 dark:border-[#0f0c29] p-0`;
+  border border-solid border-gray-200 dark:border-bg-dark3 p-0`;
 
   const commentsContainer = document.createElement("div");
   commentsContainer.className =
@@ -156,7 +156,7 @@ const SinglePost = async () => {
   commentsContainer.appendChild(comment);
 
   const formDiv = document.createElement("div");
-  formDiv.className = "relative bottom-0 p-5 m-0 bg-stone-50 dark:bg-[#0f0c29]";
+  formDiv.className = "relative bottom-0 p-5 m-0 bg-stone-50 dark:bg-bg-dark3";
 
   const form = await commentForm();
   formDiv.appendChild(form);

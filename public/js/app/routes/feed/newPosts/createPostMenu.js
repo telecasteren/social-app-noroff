@@ -10,7 +10,7 @@ const createPostMenu = () => {
   const menu = document.createElement("div");
   menu.id = "speed-dial-menu-dropdown";
   menu.className = `flex flex-col justify-end hidden mb-4 bg-white
-  rounded-lg shadow-xs dark:bg-gray-700 dark:border-gray-600`;
+  rounded-lg shadow-2xs dark:bg-gray-700 dark:border-gray-600`;
 
   const ul = document.createElement("ul");
   ul.className = "text-sm text-gray-500 dark:text-gray-300";
@@ -19,7 +19,7 @@ const createPostMenu = () => {
   const a = document.createElement("a");
   a.href = "#";
   a.className = `flex items-center px-4 py-2 bg-white
-  rounded-md shadow-sm text-sm dark:bg-[#0f0c29]`;
+  rounded-md shadow-xs text-sm dark:bg-bg-dark3`;
 
   a.appendChild(document.createTextNode("Create new post."));
   li.appendChild(a);

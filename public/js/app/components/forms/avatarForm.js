@@ -53,7 +53,7 @@ export const editAvatar = async (user, originalAvatar) => {
   const closeButton = document.createElement("span");
   closeButton.id = "cancel";
   closeButton.innerHTML = "Cancel";
-  closeButton.className = `close-modal text-[var(--accent)]
+  closeButton.className = `close-modal text-(--accent)
   text-[12px] font-bold cursor-pointer hover:text-black ml-4`;
 
   formContainer.appendChild(avatarLabel);
@@ -61,7 +61,7 @@ export const editAvatar = async (user, originalAvatar) => {
 
   const avatar = document.createElement("input");
   avatar.className = `
-  w-full sm:w-[320px] md:w-[360px] lg:w-[100%]
+  w-full sm:w-[320px] md:w-[360px] lg:w-full
   rounded p-2 text-black text-sm mt-2 mb-2 justify-self-center
   border border-gray-800
 `;
@@ -75,7 +75,7 @@ export const editAvatar = async (user, originalAvatar) => {
   submitButton.id = "submit-btn";
   submitButton.type = "submit";
   submitButton.className = `text-text-light inline-flex items-center mb-2 justify-center
-  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   submitButton.innerHTML =
