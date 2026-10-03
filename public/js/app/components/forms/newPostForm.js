@@ -136,7 +136,7 @@ const newPost = () => {
   submitButton.id = "submit-btn";
   submitButton.type = "submit";
   submitButton.className = `text-text-light inline-flex items-center
-  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   submitButton.innerHTML =

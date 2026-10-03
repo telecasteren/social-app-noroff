@@ -37,7 +37,7 @@ const Dashboard = () => {
     caption.classList.add(
       "flex",
       "flex-wrap",
-      "break-words",
+      "wrap-break-word",
       "whitespace-normal",
       "max-w-full",
       "text-center"

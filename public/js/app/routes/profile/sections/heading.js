@@ -67,7 +67,7 @@ const Heading = async (user) => {
   const avatar = document.createElement("img");
   avatar.id = "avatar-img";
   avatar.className =
-    "w-32 h-32 object-cover transition duration-300 ease-in-out group-hover:blur-sm";
+    "w-32 h-32 object-cover transition duration-300 ease-in-out group-hover:blur-xs";
   avatar.src = userAvatarSrc;
   avatar.alt = userAvatarAlt || "No image uploaded.";
 
@@ -81,7 +81,7 @@ const Heading = async (user) => {
   avatarContainer.className = "relative w-full h-full";
 
   const editAvatarIcon = document.createElement("div");
-  editAvatarIcon.className = `absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm
+  editAvatarIcon.className = `absolute inset-0 bg-black bg-opacity-40 backdrop-blur-xs
   flex items-center justify-center opacity-0 group-hover:opacity-100
   transition-opacity duration-300 cursor-pointer rounded-full`;
 
@@ -93,7 +93,7 @@ const Heading = async (user) => {
 `;
   editAvatarIcon.appendChild(svgIcon);
 
-  avatar.classList.add("group-hover:blur-sm");
+  avatar.classList.add("group-hover:blur-xs");
 
   editAvatarIcon.addEventListener("click", async () => {
     const avatarEditForm = await editAvatar(user, avatarWrapper);

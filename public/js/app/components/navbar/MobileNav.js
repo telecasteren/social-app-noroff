@@ -32,7 +32,7 @@ export const MobileNav = (auth, links) => {
 
   const container = document.createElement("div");
   container.className =
-    "max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4";
+    "max-w-(--breakpoint-xl) flex flex-wrap items-center justify-between mx-auto p-4";
 
   const logoLink = document.createElement("a");
   logoLink.href = "#";
@@ -56,7 +56,7 @@ export const MobileNav = (auth, links) => {
   menuButton.type = "button";
   menuButton.className = `
       inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg
-      hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200
+      hover:bg-accent focus:outline-hidden focus:ring-2 focus:ring-gray-200
       dark:text-gray-400 dark:hover:bg-accent-dark dark:focus:ring-gray-600`;
   menuButton.setAttribute("aria-controls", "navbar-hamburger");
   menuButton.setAttribute("aria-expanded", "false");

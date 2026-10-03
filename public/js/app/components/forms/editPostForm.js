@@ -150,7 +150,7 @@ const editPostForm = async (post) => {
   submitButton.id = "submit-btn";
   submitButton.type = "submit";
   submitButton.className = `text-text-light inline-flex items-center mb-2
-  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   submitButton.innerHTML =
@@ -160,7 +160,7 @@ const editPostForm = async (post) => {
   deleteButton.id = "delete-btn";
   deleteButton.type = "button";
   deleteButton.className = `text-white inline-flex items-center ml-2
-  bg-[#181438e3] hover:brightness-150 focus:ring-2 focus:outline-none focus:ring-blue-300
+  bg-[#181438e3] hover:brightness-150 focus:ring-2 focus:outline-hidden focus:ring-blue-300
   font-medium rounded-lg text-sm px-5 py-2.5 text-center`;
 
   deleteButton.innerHTML =
@@ -168,7 +168,7 @@ const editPostForm = async (post) => {
 
   const confirmMessage = document.createElement("div");
   confirmMessage.className =
-    "hidden max-w-96 rounded bg-red-100 mt-2 p-2 border border-red-600 text-red-600";
+    "hidden max-w-96 rounded-sm bg-red-100 mt-2 p-2 border border-red-600 text-red-600";
   confirmMessage.textContent = "Are you sure you want to delete this post?";
 
   const createConfirmationOption = (text) => {

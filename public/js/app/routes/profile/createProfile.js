@@ -45,7 +45,7 @@ const Profile = async () => {
 
   const profileContainer = document.createElement("div");
   profileContainer.className =
-    "profile-container w-[100vw] min-h-screen p-8 gap-16";
+    "profile-container w-screen min-h-screen p-8 gap-16";
 
   const userHeading = await Heading(user);
   const userDetails = await Details(user);

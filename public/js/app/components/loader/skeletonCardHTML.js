@@ -19,7 +19,7 @@ export const createSkeletonCard = () => {
   const loaderContainer = document.createElement("div");
   loaderContainer.setAttribute("role", "status");
   loaderContainer.className = `justify-self-center w-full max-w-sm p-4 border border-gray-200 rounded-md
-  shadow-sm animate-pulse md:p-6 dark:border-gray-700`;
+  shadow-xs animate-pulse md:p-6 dark:border-gray-700`;
 
   const imagePlaceholder = document.createElement("div");
   imagePlaceholder.className =

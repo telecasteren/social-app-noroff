@@ -20,7 +20,7 @@ export const goBackBtn = () => {
 
   const backBtn = document.createElement("div");
   backBtn.className = `text-md mt-4 underline
-  hover:underline-none hover:text-[var(--accent)] cursor-pointer`;
+  hover:underline-none hover:text-(--accent) cursor-pointer`;
   backBtn.textContent = "← Go back";
 
   backBtn.addEventListener("click", () => {

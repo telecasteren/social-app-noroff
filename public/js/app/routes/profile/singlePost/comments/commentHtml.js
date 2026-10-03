@@ -51,7 +51,7 @@ export const commentHtml = (comment) => {
 
   const nameSpan = document.createElement("span");
   nameSpan.className =
-    "text-sm font-semibold text-gray-900 dark:text-white hover:text-accent-light hover:dark:text-accent-dark";
+    "text-sm font-semibold text-gray-900 dark:text-white hover:text-accent-light dark:hover:text-accent-dark";
   nameSpan.textContent = authorName;
   linkTitle.appendChild(nameSpan);
   header.appendChild(linkTitle);

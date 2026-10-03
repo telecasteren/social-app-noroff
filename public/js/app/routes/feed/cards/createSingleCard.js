@@ -28,7 +28,7 @@ export const createSingleCard = (post) => {
   const card = document.createElement("div");
   card.setAttribute("data-id", post.id);
   card.className = `user-post max-w-sm w-80 bg-white border border-gray-200 rounded-md
-    shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
+    shadow-xs dark:bg-bg-dark3 dark:border-none hover:scale-105 transition-transform duration-300`;
 
   const image = document.createElement("img");
   image.className = "rounded-t-md w-full h-48 object-cover";
@@ -42,7 +42,7 @@ export const createSingleCard = (post) => {
   linkTitle.href = "/user/profile/";
   const authorName = document.createElement("h2");
   authorName.className =
-    "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200";
+    "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark hover:text-gray-900 dark:hover:text-gray-200";
   authorName.textContent = userName;
   linkTitle.appendChild(authorName);
 
