@@ -1,7 +1,8 @@
 import {
-  userMessage,
-  clearUserMessage,
+    userMessage,
+    clearUserMessage,
 } from "/js/utils/messages/userMessage.js";
+import { switchThemeToggle } from "/js/app/components/buttons/switchThemeToggle.js";
 /**
  * Returns an array of options for a user's settings menu.
  *
@@ -18,20 +19,25 @@ import {
  * options.forEach(option => console.log(option.text));
  */
 export const settingsOptions = () => {
-  const items = [
-    {
-      text: "Edit profile",
-      action: (e) => {
-        /* will later handle editing username, name, avatar, email, etc. */
-        e.addEventListener("click", () => {
-          userMessage("alert", "This feature is coming soon.");
-          setTimeout(() => clearUserMessage(), 2000);
-        });
-      },
-    },
-    {
-      text: "Logout",
-    },
-  ];
-  return items;
+    const items = [
+        {
+            text: "Edit profile",
+            action: (e) => {
+                /* will later handle editing username, name, avatar, email, etc. */
+                e.addEventListener("click", () => {
+                    userMessage("alert", "This feature is coming soon.");
+                    setTimeout(() => clearUserMessage(), 2000);
+                });
+            },
+        },
+        {
+            action: (el) => {
+                el.appendChild(switchThemeToggle());
+            },
+        },
+        {
+            text: "Logout",
+        },
+    ];
+    return items;
 };

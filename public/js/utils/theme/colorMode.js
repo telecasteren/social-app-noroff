@@ -1,20 +1,13 @@
+const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
 const setTheme = () => {
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem(
-      "theme",
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
-  } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem(
-      "theme",
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
-  }
+    const storedTheme = localStorage.getItem("theme");
+    const isDark =
+        storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme === "dark"
+            : prefersDarkTheme.matches;
+    document.documentElement.classList.toggle("dark", isDark);
 };
 export default setTheme;
 
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", setTheme);
+prefersDarkTheme.addEventListener("change", setTheme);
