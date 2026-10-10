@@ -28,65 +28,72 @@ import { setPageTitles } from "/js/utils/general/setPageTitles.js";
  * - Logs warnings or messages to the console or via `userMessage`.
  */
 export const handleClicks = (e, href, isProfile = false) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (href === "/") {
-    if (window.location.pathname === "/") {
-      window.location.reload();
-      return;
-    }
-    window.location.assign("/");
-    return;
-  }
-
-  if (href === "/user/logout/") {
-    const logoutContainer = document.createElement("div");
-    logoutContainer.className =
-      "flex flex-wrap items-center justify-self-center w-[200px]";
-    const logoutMessage = document.createElement("p");
-    logoutMessage.className = "text-black text-medium m-4";
-    logoutMessage.textContent = "Logging out";
-    logoutContainer.appendChild(logoutMessage);
-
-    toggleModal(logoutContainer);
-    if (logoutContainer) {
-      const closeBtn = document.querySelector(".close-modal");
-      const modalContent = document.querySelector(".modal-content");
-      closeBtn.style.opacity = "0";
-      modalContent.style.width = "40%";
+    if (href === "/") {
+        if (window.location.pathname === "/") {
+            window.location.reload();
+            return;
+        }
+        window.location.assign("/");
+        return;
     }
 
-    let dots = 0;
-    let maxDots = 3;
-    const dotInterval = setInterval(() => {
-      dots = (dots + 1) % (maxDots + 1);
-      logoutMessage.textContent = "Logging out" + " . ".repeat(dots);
-    }, 400);
+    if (href === "/user/logout/") {
+        const logoutContainer = document.createElement("div");
+        logoutContainer.className =
+            "flex flex-wrap items-center justify-center justify-self-center w-full p-2 md:p-0 md:w-[200px]";
+        const logoutMessage = document.createElement("p");
+        logoutMessage.className =
+            "text-black text-medium justify-self-center flex items-center";
+        logoutMessage.textContent = "Logging out";
+        logoutContainer.appendChild(logoutMessage);
 
-    setTimeout(() => {
-      clearInterval(dotInterval);
-      Logout();
-      closeModal();
-    }, 3000);
+        toggleModal(logoutContainer);
+        if (logoutContainer) {
+            const closeBtn = document.querySelector(".close-modal");
+            const modalContent = document.querySelector(".modal-content");
+            closeBtn.style.opacity = "0";
+            modalContent.classList.add(
+                "flex",
+                "items-center",
+                "justify-center",
+                "w-[90%]",
+                "md:w-[40%]",
+            );
+        }
 
-    return;
-  }
+        let dots = 0;
+        let maxDots = 3;
+        const dotInterval = setInterval(() => {
+            dots = (dots + 1) % (maxDots + 1);
+            logoutMessage.textContent = "Logging out" + " . ".repeat(dots);
+        }, 400);
 
-  if (isProfile) {
-    const profile = loadKey("profile");
-    const currentUser = profile?.name;
-    if (!currentUser) {
-      userMessage("info", "Login to view your profile.");
-      console.warn("No profile found in localStorage.");
-      return;
+        setTimeout(() => {
+            clearInterval(dotInterval);
+            Logout();
+            closeModal();
+        }, 3000);
+
+        return;
     }
-    href += `?id=${currentUser}`;
-  }
 
-  if (window.location.pathname + window.location.search !== href) {
-    history.pushState(null, "", href);
+    if (isProfile) {
+        const profile = loadKey("profile");
+        const currentUser = profile?.name;
+        if (!currentUser) {
+            userMessage("info", "Login to view your profile.");
+            console.warn("No profile found in localStorage.");
+            return;
+        }
+        href += `?id=${currentUser}`;
+    }
 
-    renderContent();
-    setPageTitles();
-  }
+    if (window.location.pathname + window.location.search !== href) {
+        history.pushState(null, "", href);
+
+        renderContent();
+        setPageTitles();
+    }
 };

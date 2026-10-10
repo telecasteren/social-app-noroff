@@ -1,8 +1,6 @@
-import {
-    userMessage,
-    clearUserMessage,
-} from "/js/utils/messages/userMessage.js";
+import { getCurrentUser } from "/js/utils/source/helpers/getCurrentUser.js";
 import { switchThemeToggle } from "/js/app/components/buttons/switchThemeToggle.js";
+import { editProfileMenuEvents } from "/js/app/events/settings/editProfileMenuEvents.js";
 /**
  * Returns an array of options for a user's settings menu.
  *
@@ -23,10 +21,10 @@ export const settingsOptions = () => {
         {
             text: "Edit profile",
             action: (e) => {
-                /* will later handle editing username, name, avatar, email, etc. */
-                e.addEventListener("click", () => {
-                    userMessage("alert", "This feature is coming soon.");
-                    setTimeout(() => clearUserMessage(), 2000);
+                e.addEventListener("click", async () => {
+                    const profile = await getCurrentUser();
+                    if (!profile) return;
+                    await editProfileMenuEvents(profile);
                 });
             },
         },
